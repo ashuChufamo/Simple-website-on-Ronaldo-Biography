@@ -1,0 +1,314 @@
+@media(max-width: 1366px){
+
+}
+@media(max-width: 1280px){
+	
+}
+@media(max-width: 1024px){
+	.professions-list .menu-item{
+		font-size: 18px;
+	}
+	.item-title {
+	    font-size: 22px;
+	}
+	.top-menu .menu-item {
+	    font-size: 16px;
+	}
+	#top-menu{
+		top: 65px;
+	}
+	.top-menu{
+		column-count: 3;
+	}
+	.post-ratings img, 
+	.post-ratings-loading img, 
+	.post-ratings-image img{
+		width: 30px;
+	}
+	.logo a, 
+	.logo span {
+	    font-size: 28px;
+	}
+	.block-not-found {
+	    max-width: 400px;
+	    height: 400px;
+	    font-size: 80px;
+	    line-height: 75px;
+	}
+	.navigate-links .nav-links>div a {
+	    padding: 0 5px;
+	}
+	.navigate-links .nav-links>div a img {
+	    width: 30px;
+	}
+}
+@media(max-width: 960px){
+	
+}
+@media(max-width: 800px){
+	.widget-title {
+	    font-size: 18px;
+	    border-left: 10px solid #000;
+	}
+	.logo a, 
+	.logo span {
+	    font-size: 24px;
+	}
+	.professions-list .menu-item {
+	    font-size: 17px;
+	}
+	.professions-list .menu-item a{
+		padding: 10px;
+	}
+	.view-rating{
+		font-size: 16px;
+	}
+	.post-ratings img, 
+	.post-ratings-loading img, 
+	.post-ratings-image img {
+	    width: 25px;
+	    margin: 0 2px;
+	}
+	.vote-label {
+	    font-size: 16px;
+	}
+	.rating-info {
+	    font-size: 16px;
+	}
+	.buttons-header li a {
+	    padding: 8px 4px;
+	}
+	.buttons-header li a::before {
+	    width: 20px;
+	    height: 20px;
+	    margin-right: 5px;
+	}
+	.buttons-header li {
+    	font-size: 16px;
+	    margin: 0 4px;
+	}
+	.menu-toggle {
+	    width: 20px;
+	    left: 15px;
+	}
+	.one, 
+	.two, 
+	.three{
+		margin: 4px 0;
+	}
+	.search .btn img {
+	    width: 25px;
+	}
+	.gallery-columns-3 .gallery-item,
+	.gallery-columns-4 .gallery-item,
+	.gallery-columns-5 .gallery-item,
+	.gallery-columns-5 .gallery-item,
+	.gallery-columns-5 .gallery-item,
+	.gallery-columns-5 .gallery-item {
+	    max-width: 33.333%;
+	    flex: 0 0 33.333%;
+	}
+}
+@media(max-width: 767px){
+	.navigate-links{
+		display: none;
+	}
+	.menu-header {
+	    position: initial;
+	    right: 0;
+	    left: 0;
+	    z-index: 1;
+	}
+	.block-not-found {
+	    max-width: 340px;
+	    height: 340px;
+		font-size: 65px;
+		line-height: 55px;
+	}
+	.widget-info h4,
+	.widget-info h3 {
+	    font-size: 18px;
+	}
+	.buttons-header li {
+	    font-size: 18px;
+	    width: 48%;
+	    margin: initial;
+	}
+	.buttons-header li:first-child {
+	    margin-right: 7px;
+	}
+	.buttons-header li:last-child {
+	    margin-left: 8px;
+	}
+	#top-menu{
+		position: initial;
+	}
+	.top-menu {
+	    column-count: 2;
+	}
+	.search .form-control {
+	    font-size: 16px;
+	}
+	/*--- Items ---*/
+	.item-title {
+	    font-size: 22px;
+	}
+	.view-rating{
+		font-size: 16px;
+	}
+	/*--- Professions ---*/
+	.professions-list .menu-item {
+	    font-size: 16px;
+	    flex: 0 0 50%;
+	    max-width: 50%;
+	}
+	/*-- Footer --*/
+	#footer{
+		padding: 15px 0;
+	}
+	body{
+		font-size: 16px;
+	}
+	.widget-title {
+    	font-size: 18px;
+	}
+	.related-title {
+	    font-size: 16px;
+	}
+	.random-related {
+	    font-size: 16px;
+	    padding: 9.5px 10px;
+	}
+	.random-related::before{
+		width: 20px;
+    	height: 20px;
+	}
+	#top{
+		right: 30px;
+		bottom: 30px;
+	}
+	.post-navigation{
+		margin-bottom: 1rem;
+	}
+	.random-related {
+	    margin-bottom: 1rem;
+	}
+}
+@media(max-width: 576px){
+	.random-related {
+	    width: 100%;
+	}
+	.widget-title:not(.title-border){
+		border: none;
+		padding-left: 6px;
+	}
+	.widget-title span {
+	    position: relative;
+	    padding: 4px 14px;
+	    display: inline-block;
+	    color: #fff;
+	}
+	.widget-title span::before {
+	    position: absolute;
+	    background-color: #000;
+	    right: 0;
+	    left: 0;
+	    top: 0;
+	    bottom: 0;
+	    width: 100%;
+	    height: 100%;
+	    content: "";
+	    z-index: -1;
+	    transform: skewX(-20deg);
+	}
+	.widget-title.title-hazel span{
+		color: #000;
+	}
+	.widget-title.title-hazel span::before {
+		background-color: #0be6af;
+	}
+	.item-caption{
+		right: 0;
+    	left: 0;
+    	bottom: 20px;
+	}
+	.item-caption>h5>a{
+		font-size: 16px;
+	}
+	.post-categories{
+		font-size: 14px;
+	}
+	.professions-list .menu-item a{
+		padding: 15px;
+	}
+	.buttons-header li {
+	    font-size: 16px;
+	    width: 47%;
+	}
+	.gallery-columns-2 .gallery-item,
+	.gallery-columns-3 .gallery-item,
+	.gallery-columns-4 .gallery-item,
+	.gallery-columns-5 .gallery-item,
+	.gallery-columns-5 .gallery-item,
+	.gallery-columns-5 .gallery-item,
+	.gallery-columns-5 .gallery-item {
+	    max-width: 50%;
+	    flex: 0 0 50%;
+	}
+	.post-ratings img, 
+	.post-ratings-loading img, 
+	.post-ratings-image img {
+	    width: 30px;
+	    margin: 0 5px;
+	}
+}
+@media(max-width: 320px){
+	.professions-list .menu-item {
+	    flex: 0 0 100%;
+	    max-width: 100%;
+	}
+	.search .form-control {
+	    font-size: 14px;
+	}
+	.rating-star {
+	    font-size: 14px;
+	}
+	.rating-star img {
+	    width: 20px;
+	}
+	.item-caption>h5>a {
+	    font-size: 14px;
+	    font-weight: normal;
+	}
+	.post-categories a {
+	    font-size: 12px;
+	}
+	.item-title {
+	    font-size: 20px;
+	}
+	.footer-menu .menu-item {
+	    font-size: 14px;
+	}
+	.single-title {
+	    font-size: 20px;
+	}
+	.breadcrumbs {
+	    color: #000;
+	    font-size: 14px;
+	}
+	.widget-title {
+    	font-size: 16px;
+	}
+	.widget-item {
+	    font-size: 14px;
+	}
+	.related-title {
+	    font-size: 14px;
+	}
+	#footer {
+	    font-size: 12px;
+	}
+	#footer .logo span {
+	    font-size: 20px;
+	}
+}

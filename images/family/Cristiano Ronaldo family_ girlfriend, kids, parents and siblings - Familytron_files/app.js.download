@@ -1,0 +1,102 @@
+$(document).ready(function() {
+    $('#openMenu').click(function(event) {
+        event.preventDefault();
+        $('#top-menu').fadeToggle('fast');
+    });
+    $('main').click(function(event) {
+        $('#top-menu').fadeOut('fast');
+    });
+    $('a[href*=".jpg"], a[href*=".jpeg"], a[href*=".png"], a[href*=".gif"]').each(function(){
+    	if ($(this).parents('.gallery').length == 0) {
+	        $(this).magnificPopup({
+	            type: 'image',
+				removalDelay: 300,
+				closeOnContentClick: true,
+				mainClass: 'mfp-fade'
+	        });
+        }
+    });
+    $('.gallery').each(function() { // the containers for all your galleries
+        $(this).magnificPopup({
+            delegate: 'a', // the selector for gallery item
+            type: 'image',
+            gallery: {
+                enabled: true
+            }
+        });
+    });
+    $('#search').autocomplete({
+        source: function (request, response) {
+            $.ajax({
+                method: "GET",
+                dataType: "json",
+                url: "https://familytron.com/wp-json/wp/v2/posts?search="+request.term,
+                success: function (data) {
+                    response(data);
+                },
+                error: function () {
+                    response([]);
+                }
+            });
+        },
+        minLength: 2,
+        select: function(event, ui) {
+            var permalink = ui.item.link;
+            window.location.replace(permalink);
+        }
+    });
+    $('#search').data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+        var $li = $('<li>'),
+        $img = $('<img>');
+        $img.attr({
+            src: item.featured_image.source_url,
+            alt: item.title.rendered
+        });
+        $li.append($img).append(item.title.rendered);    
+        return $li.appendTo(ul);
+    };
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+            $('#top').fadeIn();
+        }
+        else {
+            $('#top').fadeOut();
+        }
+    });
+    $('#top').click(function (e) {
+        e.preventDefault()
+        $('body, html').animate({
+            scrollTop: 0
+        }, 1000);
+    });
+    $(".form-site").submit(function(){
+        var form = $(this);
+        var data = form.serialize();
+        $.ajax({
+            type: 'POST',
+            url: '/send.php',
+            dataType: 'json',
+            data: data,
+            beforeSend: function(data) { 
+                $('#about-send').html('<div class="thanks-form">Sending...</div>');
+            },
+            complete: function(data) {
+                $('#about-send-delete').html(" ")
+                $('.thanks-form').text('Your update is greatly appreciated!');
+            }
+        });
+        return false; 
+    });
+    $(function(){
+        createSticky($(".menu-header"));
+    });
+    function createSticky(sticky) {
+        if (typeof sticky !== "undefined") {
+            let pos = sticky.offset().top + 15,
+                win = $(window);
+            win.on("scroll", function() {
+                win.scrollTop() >= pos ? sticky.addClass("fixed") : sticky.removeClass("fixed");      
+            });         
+        }
+    }
+});
